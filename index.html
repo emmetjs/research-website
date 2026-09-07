@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emmet Szewczyk</title>
+    <meta
+      name="description"
+      content="Emmet Szewczyk — Economic Research"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <div id="top"></div>
+    <!-- ── NAV ──────────────────────────────────────────────── -->
+    <nav class="nav">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">Emmet Szewczyk</a>
+    
+        <button class="nav-toggle" aria-label="Open navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+    
+        <ul class="nav-links">
+          <li><a href="#top">home</a></li>
+          <li><a href="index.html#about">about</a></li>
+          <li><a href="index.html#featured">featured</a></li>
+          <li><a href="research/index.html">research</a></li>
+          <li><a href="index.html">photos</a></li>
+          <li><a href="index.html">videos</a></li>
+          <li><a href="index.html#contact">contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- ── HOME ─────────────────────────────────────────────── -->
+    <section id="home">
+      <div class="home-left">
+        <div class="home-eyebrow">
+          <div class="home-eyebrow-line"></div>
+          ECONOMICS | RESEARCH | MEDIA
+        </div>
+        <h1 class="hero-title">
+          understanding<br />
+          <strong>how things work.</strong>
+        </h1>
+        <p class="hero-desc">
+          I research the economic systems behind cities, policies, business,
+          and the news, using data and visualizations to explain what is happening,
+          who is impacted, and why it matters.
+        </p>
+        <div class="hero-actions">
+          <button
+            class="btn-primary"
+            onclick="
+              document
+                .getElementById('contact')
+                .scrollIntoView({ behavior: 'smooth' })
+            "
+          >
+            get in touch
+          </button>
+          <button
+            class="btn-outline"
+            onclick="
+              document
+                .getElementById('work')
+                .scrollIntoView({ behavior: 'smooth' })
+            "
+          >
+            see my work
+          </button>
+        </div>
+      </div>
+      <div class="home-right">
+        <div class="status-card">
+          <div class="status-card-header">
+            <span class="status-card-title">current status</span>
+            <span class="status-avail"
+              ><div class="avail-dot"></div>
+              available</span
+            >
+          </div>
+          <div class="status-card-body">
+            <div class="status-row">
+              <span class="status-key">based in</span>
+              <span class="status-val">Chicago</span>
+            </div>
+            <div class="status-row">
+              <span class="status-key">studying</span>
+              <span class="status-val">Economics / Math</span>
+            </div>
+            <div class="status-row">
+              <span class="status-key">focus</span>
+              <span class="status-val">Economics / Policy / Cities</span>
+            </div>
+            <div class="status-row">
+              <span class="status-key">interests</span>
+              <span class="status-val">Research / Media</span>
+            </div>
+            <div class="status-row">
+              <span class="status-key">currently</span>
+              <span class="status-val">Researching development projects</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── ABOUT ──────────────────────────────────────────────── -->
+    <section id="about">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">about</h2>
+        </div>
+        <div class="about-body">
+          <div class="about-text">
+            <p class="about-p">
+              I study economics and mathematics at the University of Illinois, Chicago
+              and am interested in the cities, laws, policies, and institutions that
+              shape people's daily life.
+              
+            </p>
+            <p class="about-p">
+              My work combines research, data analysis, writing, and visual storytelling.
+              I am often <em>frustrated</em> by the coverage, or lack of it, of economic
+              concepts in the media and the general inaccessibility of economic research.
+              My goal with this project is to make complicated and important subjects
+              understandable and impactful for people without an economics education.
+            </p>
+            <p class="about-p">
+              This site hosts the research, reporting, photography, visualizations, and
+              other projects I am building as I finish my degree.
+              Also, I want to pet your dog.
+            </p>
+          </div>
+          <div class="about-aside">
+            <div class="aside-block">
+              <div class="aside-title">outside the editor</div>
+              <div class="aside-items">
+                <div class="aside-item">I play rugby.</div>
+                <div class="aside-item">Then I drink beer.</div>
+                <div class="aside-item">Then I read book.</div>
+                <div class="aside-item">And play with dogs...</div>
+              </div>
+            </div>
+            <div class="aside-block">
+              <div class="aside-title">currently exploring</div>
+              <div class="aside-items">
+                <div class="aside-item">The 1901 and Railyards Development Projects in Chicago</div>
+                <div class="aside-item">Chicago Rental Markets</div>
+              </div>
+            </div>
+            <div class="aside-block">
+              <div class="aside-title">reading</div>
+              <div class="aside-items">
+                <div class="aside-item">Fear and Loathing in Las Vegas</div>
+                <div class="aside-item">Some economic textbook🫠🫠🫠</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── FEATURED ──────────────────────────────────────────────── -->
+    <section id="featured">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">selected work</h2>
+          <span class="section-count">04 projects</span>
+        </div>
+        <div class="work-grid">
+          <a href="#" class="work-card">
+            <div class="work-card-num">01 / 04</div>
+            <div class="work-card-title">
+              [Project Name 1] <em>— short tagline</em>
+            </div>
+            <div class="work-card-footer">
+              <span class="work-card-stack">html / css / js</span>
+              <div class="work-card-meta">
+                <span class="work-card-year">2024</span>
+                <span class="work-card-badge live">live</span>
+              </div>
+            </div>
+            <div class="work-card-arrow">↗</div>
+          </a>
+
+          <a href="#" class="work-card">
+            <div class="work-card-num">02 / 04</div>
+            <div class="work-card-title">
+              [Project Name 2] <em>— short tagline</em>
+            </div>
+            <div class="work-card-footer">
+              <span class="work-card-stack">react / node.js</span>
+              <div class="work-card-meta">
+                <span class="work-card-year">2024</span>
+                <span class="work-card-badge live">live</span>
+              </div>
+            </div>
+            <div class="work-card-arrow">↗</div>
+          </a>
+
+          <a href="#" class="work-card">
+            <div class="work-card-num">03 / 04</div>
+            <div class="work-card-title">
+              [Project Name 3] <em>— short tagline</em>
+            </div>
+            <div class="work-card-footer">
+              <span class="work-card-stack">python / postgresql</span>
+              <div class="work-card-meta">
+                <span class="work-card-year">2023</span>
+                <span class="work-card-badge">archived</span>
+              </div>
+            </div>
+            <div class="work-card-arrow">↗</div>
+          </a>
+
+          <a href="#" class="work-card">
+            <div class="work-card-num">04 / 04</div>
+            <div class="work-card-title">
+              [Project Name 4] <em>— short tagline</em>
+            </div>
+            <div class="work-card-footer">
+              <span class="work-card-stack">next.js / supabase</span>
+              <div class="work-card-meta">
+                <span class="work-card-year">2024</span>
+                <span class="work-card-badge wip">wip</span>
+              </div>
+            </div>
+            <div class="work-card-arrow">↗</div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CONTACT ────────────────────────────────────────────── -->
+    <section id="contact">
+      <div class="container">
+        <div class="contact-body">
+          <h2 class="contact-big">got any<br /><em>tea?</em></h2>
+          <div class="contact-row">
+            <div class="contact-email-wrap">
+              <div class="contact-label">spill it here pls</div>
+              <a href="mailto:contact@emmetszewczyk.com" class="contact-email"
+                >contact@emmetszewczyk.com</a
+              >
+            </div>
+            <div class="social-stack">
+              <a href="#" class="social-link">github</a>
+              <a href="#" class="social-link">linkedin</a>
+              <a href="#" class="social-link">twitter</a>
+              <a href="#" class="social-link">resume</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── FOOTER ─────────────────────────────────────────────── -->
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-l">
+          © 2026 Emmet Szewczyk — template by
+          <a href="https://kayspace.vercel.app" target="_blank">kayspace</a>
+        </div>
+        <div class="footer-r"
+            ><a
+            class="footer-r"
+              href="https://github.com/kayspace/portfolio-template/blob/master/templates/template2.html"
+              target="_blank"
+              >template/source code ✪</a
+            ></div>
+      </div>
+    </footer>
+
+    <!-- ── GSAP ─────────────────────────────────────────────── -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- Homepage JavaScript -->
+    <script src="assets/js/main.js"></script>
+    
+    <!-- Navigation JavaScript -->
+    <script src="assets/js/nav.js"></script>
+
+  </body>
+</html>

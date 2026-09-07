@@ -1,0 +1,51 @@
+const articles = [
+  {
+    title: "First Test Article",
+    description: "A one-sentence summary of what this article covers.",
+    image: "photos/cover.svg",
+    link: "first-article.html",
+    date: "September 7th, 2026",
+  },
+  {
+    title: "Second Test Article",
+    description: "A one-sentence summary of what this article covers.",
+    image: "photos/cover.svg",
+    link: "second-article.html",
+    date: "September 4th, 2026",
+  },
+  {
+    title: "Third Test Article",
+    description: "A one-sentence summary of what this article covers.",
+    image: "photos/cover.svg",
+    link: "third-article.html",
+    date: "September 5th, 2026",
+  },
+  {
+    title: "Fourth Test Article",
+    description: "A one-sentence summary of what this article covers.",
+    image: "photos/cover.svg",
+    link: "fourth-article.html",
+    date: "September 6th, 2026",
+  },
+  {
+    title: "Fourth Test Article",
+    description: "A one-sentence summary of what this article covers.",
+    image: "photos/cover.svg",
+    link: "fourth-article.html",
+    date: "September 6th, 2026",
+  },
+  {
+    title: "Fourth Test Article",
+    description: "A one-sentence summary of what this article covers.",
+    image: "photos/cover.svg",
+    link: "fourth-article.html",
+    date: "September 6th, 2026",
+  },
+  {
+    title: "Fourth Test Article",
+    description: "A one-sentence summary of what this article covers.",
+    image: "photos/cover.svg",
+    link: "fourth-article.html",
+    date: "September 6th, 2026",
+  },
+];
