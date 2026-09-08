@@ -3,7 +3,7 @@ const articles = [
     title: "First Test Article",
     description: "A one-sentence summary of what this article covers.",
     image: "thumbnails/cover.svg",
-    link: "first-article.html",
+    link: "article.html",
     date: "September 7th, 2026",
   },
   {
