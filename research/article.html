@@ -5,29 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- ══════════════════════════════════════════════════════════
-         EDIT THESE THREE LINES FOR EACH NEW ARTICLE
+         ARTICLE METADATA
          ══════════════════════════════════════════════════════════ -->
     <title>Emmet Szewczyk - Article Title Here</title>
-    <meta name="description" content="A one-sentence summary of what this article covers." />
-    <!-- ══════════════════════════════════════════════════════════ -->
+    <meta
+      name="description"
+      content="A one-sentence summary of what this article covers."
+    />
+
+    <!-- Browser tab logo -->
+    <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,0..144,300;1,0..144,400&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&display=swap"
       rel="stylesheet"
     />
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <link rel="stylesheet" href="../assets/css/style.css" />
 
-    <!-- Article-only styles (prose, byline, back-link). Safe to move into style.css later. -->
+    <link rel="stylesheet" href="/assets/css/style.css" />
+
+    <!-- ══════════════════════════════════════════════════════════
+         ARTICLE-ONLY STYLES
+         ══════════════════════════════════════════════════════════ -->
     <style>
       .article-page {
         padding-top: 56px;
       }
+
       .article-header {
         padding: 5rem 3rem 3rem;
+        text-align: right;
       }
+
       .article-back {
         display: inline-block;
         font-family: var(--mono);
@@ -39,12 +51,15 @@
         margin-bottom: 2.5rem;
         transition: color 0.2s;
       }
+
       .article-back:hover {
         color: var(--red);
       }
+
       .article-back::before {
         content: "← ";
       }
+
       .article-date {
         font-family: var(--mono);
         font-size: 11px;
@@ -53,6 +68,7 @@
         color: var(--red);
         margin-bottom: 1rem;
       }
+
       .article-title {
         font-family: var(--serif);
         font-weight: 300;
@@ -62,27 +78,54 @@
         color: var(--ink);
         margin-bottom: 1.25rem;
       }
+
+      /* ── ARTICLE IMAGE ───────────────────────────────────── */
+
+      .article-cover {
+        display: block;
+        width: 100%;
+        max-height: 600px;
+        object-fit: cover;
+        border-top: 1px solid var(--rule-h);
+        border-bottom: 1px solid var(--rule-h);
+      }
+
+      /* ── ARTICLE INTRO ───────────────────────────────────── */
+
+      .article-intro {
+        max-width: 680px;
+        margin: 0 auto;
+        padding: 2rem 3rem 0;
+        text-align: right;
+      }
+
       .article-dek {
         font-family: var(--serif);
         font-style: italic;
         font-weight: 300;
         font-size: 1.15rem;
         color: var(--ink2);
-        max-width: 620px;
         line-height: 1.5;
+        margin-bottom: 0.75rem;
       }
-      .article-cover {
-        width: 100%;
-        max-height: 480px;
-        object-fit: cover;
-        border-top: 1px solid var(--rule-h);
-        border-bottom: 1px solid var(--rule-h);
+
+      .article-author {
+        font-family: var(--mono);
+        font-size: 11px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--ink3);
       }
+
+      /* ── ARTICLE BODY ────────────────────────────────────── */
+
       .article-body {
         max-width: 680px;
         margin: 0 auto;
         padding: 4rem 3rem 6rem;
+        text-align: right;
       }
+
       .article-body p {
         font-family: var(--mono);
         font-size: 14px;
@@ -90,6 +133,7 @@
         color: var(--ink2);
         margin-bottom: 1.5rem;
       }
+
       .article-body h2 {
         font-family: var(--serif);
         font-weight: 300;
@@ -98,6 +142,7 @@
         color: var(--ink);
         margin: 3rem 0 1.25rem;
       }
+
       .article-body h3 {
         font-family: var(--mono);
         font-size: 12px;
@@ -106,129 +151,305 @@
         color: var(--ink3);
         margin: 2.5rem 0 1rem;
       }
+
       .article-body blockquote {
-        border-left: 2px solid var(--red);
-        padding-left: 1.5rem;
+        border-right: 2px solid var(--red);
+        border-left: none;
+        padding-right: 1.5rem;
+        padding-left: 0;
         margin: 2rem 0;
         font-family: var(--serif);
         font-style: italic;
         font-size: 1.1rem;
         color: var(--ink2);
       }
+
       .article-body a {
         color: var(--red);
       }
+
       .article-body ul,
       .article-body ol {
         font-family: var(--mono);
         font-size: 14px;
         line-height: 1.9;
         color: var(--ink2);
-        margin: 0 0 1.5rem 1.25rem;
+        margin: 0 1.25rem 1.5rem 0;
       }
+
+      /* ── ARTICLE VISUALS ─────────────────────────────────── */
+
       .article-body img {
+        display: block;
         width: 100%;
-        margin: 1rem 0 2rem;
+        height: auto;
+        margin: 2rem 0 2.5rem;
       }
+
+      .article-figure {
+        margin: 3rem 0;
+      }
+
+      .article-figure img {
+        margin: 0 0 0.75rem;
+      }
+
+      .article-caption {
+        font-family: var(--mono);
+        font-size: 10px;
+        line-height: 1.6;
+        color: var(--ink3);
+        margin: 0;
+      }
+
+      /* ── INTERACTIVE GRAPH CONTAINER ─────────────────────── */
+
+      .interactive-graph {
+        width: 100%;
+        margin: 3rem 0;
+      }
+
+      .interactive-graph iframe {
+        display: block;
+        width: 100%;
+        min-height: 500px;
+        border: none;
+      }
+
+      /* ── DIVIDER ─────────────────────────────────────────── */
+
       .article-body hr {
         border: none;
         border-top: 1px solid var(--rule);
         margin: 3rem 0;
       }
+
+      /* ── MOBILE ──────────────────────────────────────────── */
+
+      @media (max-width: 700px) {
+        .article-header {
+          padding: 4rem 1.5rem 2rem;
+        }
+
+        .article-intro,
+        .article-body {
+          padding-left: 1.5rem;
+          padding-right: 1.5rem;
+        }
+
+        .article-cover {
+          max-height: 400px;
+        }
+      }
     </style>
   </head>
+
   <body>
+
     <!-- ── NAV ──────────────────────────────────────────────── -->
+
     <nav class="nav">
       <div class="nav-inner">
-        <a href="../index.html" class="nav-logo">Emmet Szewczyk</a>
 
-        <button class="nav-toggle" aria-label="Open navigation menu" aria-expanded="false">
+        <a href="/index.html" class="nav-logo">
+          Emmet Szewczyk
+        </a>
+
+        <button
+          class="nav-toggle"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+        >
           <span></span>
           <span></span>
           <span></span>
         </button>
 
         <ul class="nav-links">
-          <li><a href="../index.html">home</a></li>
-          <li><a href="../index.html#about">about</a></li>
-          <li><a href="../index.html#featured">featured</a></li>
-          <li><a href="index.html">research</a></li>
-          <li><a href="../index.html">photos</a></li>
-          <li><a href="../index.html">videos</a></li>
-          <li><a href="../index.html#contact">contact</a></li>
+          <li><a href="/index.html">home</a></li>
+          <li><a href="/index.html#about">about</a></li>
+          <li><a href="/index.html#featured">featured</a></li>
+          <li><a href="/research/index.html">research</a></li>
+          <li><a href="/index.html">photos</a></li>
+          <li><a href="/index.html">videos</a></li>
+          <li><a href="/index.html#contact">contact</a></li>
         </ul>
+
       </div>
     </nav>
 
+
     <!-- ── ARTICLE ─────────────────────────────────────────────── -->
+
     <main class="article-page">
+
+      <!-- ARTICLE HEADER -->
+
       <header class="article-header container">
-        <a href="index.html" class="article-back">back to research</a>
 
-        <!-- EDIT: date should match the "date" field for this article in articles.js -->
-        <div class="article-date">September 7th, 2026</div>
+        <a href="/research/index.html" class="article-back">
+          back to research
+        </a>
 
-        <!-- EDIT: title should match the "title" field in articles.js -->
-        <h1 class="article-title">Article Title Here</h1>
+        <div class="article-date">
+          September 7th, 2026
+        </div>
 
-        <!-- EDIT: optional one-line dek/subtitle, can mirror the "description" field -->
+        <h1 class="article-title">
+          Article Title Here
+        </h1>
+
+      </header>
+
+
+      <!-- ARTICLE THUMBNAIL / COVER -->
+
+      <img
+        class="article-cover"
+        src="thumbnail.jpg"
+        alt="Article thumbnail"
+      />
+
+
+      <!-- ARTICLE SUMMARY + AUTHOR -->
+
+      <div class="article-intro">
+
         <p class="article-dek">
           A one-sentence summary of what this article covers.
         </p>
-      </header>
 
-      <!-- EDIT: cover image. Keep same file used as "image" in articles.js, or a larger version -->
-      <img class="article-cover" src="photos/cover.svg" alt="" />
+        <div class="article-author">
+          Emmet Szewczyk
+        </div>
 
-      <!-- ══════════════════════════════════════════════════════════
-           ARTICLE BODY — replace this content with the actual write-up
-           ══════════════════════════════════════════════════════════ -->
+      </div>
+
+
+      <!-- ── ARTICLE BODY ───────────────────────────────────── -->
+
       <article class="article-body">
+
         <p>
           Start the article here. This paragraph style uses the site's
           monospace body font at a comfortable reading size and line height.
         </p>
 
-        <h2>A Section Heading</h2>
+
+        <h2>
+          A Section Heading
+        </h2>
+
         <p>
-          Use <code>h2</code> for major section breaks — it renders in the
-          serif display font to match headings elsewhere on the site.
+          Use h2 for major section breaks.
         </p>
 
-        <h3>A Smaller Label</h3>
+
+        <h3>
+          A Smaller Label
+        </h3>
+
         <p>
-          Use <code>h3</code> for smaller uppercase labels, like a subsection
-          or a callout heading.
+          Use h3 for smaller uppercase labels, subsections, or callouts.
         </p>
+
+
+        <!-- ── PHOTO / GRAPH EXAMPLE ───────────────────────── -->
+
+        <figure class="article-figure">
+
+          <img
+            src="visuals/example-graph.png"
+            alt="Description of the graph"
+          />
+
+          <figcaption class="article-caption">
+            Figure 1. Description of the graph or photograph.
+          </figcaption>
+
+        </figure>
+
+
+        <!-- ── BLOCKQUOTE ──────────────────────────────────── -->
 
         <blockquote>
-          A pull-quote or highlighted line can go here, styled with the
-          italic serif and a red accent rule.
+          A pull-quote or highlighted line can go here.
         </blockquote>
 
+
         <p>
-          Continue the write-up with as many paragraphs, lists, or images as
-          needed. Use a plain <code>&lt;hr&gt;</code> to add a visual break
-          between major parts of the article.
+          Continue the write-up with as many paragraphs, lists, images,
+          graphs, and other elements as needed.
         </p>
+
+
+        <hr />
+
+
+        <h2>
+          Another Section
+        </h2>
+
+        <p>
+          Additional article content goes here.
+        </p>
+
+
+        <!-- ── INTERACTIVE GRAPH EXAMPLE ───────────────────── -->
+
+        <!--
+          Interactive graphs can be embedded here later.
+
+          Example:
+
+          <div class="interactive-graph">
+            <iframe
+              src="visuals/interactive-graph.html"
+              title="Interactive graph"
+            ></iframe>
+          </div>
+        -->
+
+
       </article>
+
     </main>
 
-    <!-- ── MENU FUNCTIONALITY ─────────────────────────────────────────────── -->
-    <script src="../assets/js/nav.js"></script>
 
-    <!-- ── FOOTER ──────────────────────────────────────────────── -->
+    <!-- ── MENU FUNCTIONALITY ──────────────────────────────── -->
+
+    <script src="/assets/js/nav.js"></script>
+
+
+    <!-- ── FOOTER ──────────────────────────────────────────── -->
+
     <footer>
+
       <div class="footer-inner">
+
         <div class="footer-l">
           © 2026 Emmet Szewczyk — template by
-          <a href="https://kayspace.vercel.app" target="_blank">kayspace</a>
+          <a
+            href="https://kayspace.vercel.app"
+            target="_blank"
+          >
+            kayspace
+          </a>
         </div>
+
         <div class="footer-r">
-          <a class="footer-r" href="https://github.com/kayspace/portfolio-template/blob/master/templates/template2.html" target="_blank">template/source code ✪</a>
+          <a
+            class="footer-r"
+            href="https://github.com/kayspace/portfolio-template/blob/master/templates/template2.html"
+            target="_blank"
+          >
+            template/source code ✪
+          </a>
         </div>
+
       </div>
+
     </footer>
+
   </body>
 </html>
